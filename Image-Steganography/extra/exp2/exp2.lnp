@@ -1,0 +1,5 @@
+--cpu Cortex-M3 "exp2.o" 
+--strict --scatter "exp2.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\exp2.map" -o exp2.axf

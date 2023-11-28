@@ -1,0 +1,6 @@
+--cpu Cortex-M3
+".\objects\exp5.o"
+--strict --scatter ".\Objects\ex6.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\ex6.map" -o .\Objects\ex6.axf

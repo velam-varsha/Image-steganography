@@ -1,0 +1,93 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET, DATA, READONLY
+    2 00000000 013130E8        DCD              20001000
+    3 00000004 00000000        DCD              START
+    4 00000008                 AREA             MY_CODE, CODE, READONLY
+    5 00000000                 ENTRY
+    6 00000000         START
+    7 00000000 4A07            LDR              R2, DATA1
+    8 00000002 8810            LDRH             R0, [R2]
+    9 00000004 F04F 0200       MOV              R2, #00
+   10 00000008 F04F 0300       MOV              R3, #00
+   11 0000000C F011 0101       ANDS             R1, #0001
+   12 00000010 D002            BEQ              even
+   13 00000012 F04F 03FF       MOV              R3, #0XFF
+   14 00000016 E001            B                STOP
+   15 00000018 F04F 0255 
+                       even    MOV              R2, #0X55
+   16 0000001C E7FE    STOP    B                STOP
+   17 0000001E 00 00 40000010 
+                       DATA1   DCD              0X40000010
+   18 00000024                 END
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=exp2.d -
+oexp2.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\NX
+P\LPC17xx --list=exp2.lst exp2.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file exp2.s
+   Uses
+      None
+Comment: RESET unused
+1 symbol
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DATA1 00000020
+
+Symbol: DATA1
+   Definitions
+      At line 17 in file exp2.s
+   Uses
+      At line 7 in file exp2.s
+Comment: DATA1 used once
+MY_CODE 00000000
+
+Symbol: MY_CODE
+   Definitions
+      At line 4 in file exp2.s
+   Uses
+      None
+Comment: MY_CODE unused
+START 00000000
+
+Symbol: START
+   Definitions
+      At line 6 in file exp2.s
+   Uses
+      At line 3 in file exp2.s
+Comment: START used once
+STOP 0000001C
+
+Symbol: STOP
+   Definitions
+      At line 16 in file exp2.s
+   Uses
+      At line 14 in file exp2.s
+      At line 16 in file exp2.s
+
+even 00000018
+
+Symbol: even
+   Definitions
+      At line 15 in file exp2.s
+   Uses
+      At line 12 in file exp2.s
+Comment: even used once
+5 symbols
+336 symbols in table

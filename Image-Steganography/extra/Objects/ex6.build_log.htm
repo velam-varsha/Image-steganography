@@ -1,0 +1,70 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Varsha V, college, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      UL2CM3.DLL V1.164.8.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\Varsha\Desktop\extra\ex6.uvprojx
+Project File Date:  07/11/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+ArmClang: error: no such file or directory: 'C:/Keil_v5/startup_PLC17xx.s'
+ArmClang: error: no input files
+assembling startup_PLC17xx.s...
+"exp5/exp5.s", line 6 (column 2): Error: A1163E: Unknown opcode _Vectors , expecting opcode or Macro
+    6 00000000  _Vectors
+                ^
+"exp5/exp5.s", line 12 (column 2): Error: A1163E: Unknown opcode MyData1 , expecting opcode or Macro
+   12 00000000  MyData1 DCD 0 ; Word size data(32-bit)
+                ^
+"exp5/exp5.s", line 13 (column 2): Error: A1163E: Unknown opcode MyData2 , expecting opcode or Macro
+   13 00000000  MyData2 DCW 0 ; half Word size data
+                ^
+"exp5/exp5.s", line 14 (column 2): Error: A1163E: Unknown opcode MyData3 , expecting opcode or Macro
+   14 00000000  MyData3 DCB 0 ; byte size data
+                ^
+"exp5/exp5.s", line 19 (column 2): Error: A1163E: Unknown opcode START , expecting opcode or Macro
+   19 00000000  START   FUNCTION
+                ^
+"exp5/exp5.s", line 33 (column 4): Error: A1163E: Unknown opcode STOP , expecting opcode or Macro
+   33 00000018    STOP B STOP ; wait forever
+                  ^
+6 Errors, 0 Warnings
+assembling exp5.s...
+".\Objects\ex6.axf" - 2 Error(s), 0 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.LPC1700_DFP.2.7.1.pack
+                Keil.LPC1700_DFP.2.7.1
+                NXP LPC1700 Series Device Support, Drivers and Examples for MCB1700 and LPC1788-32
+
+<h2>Collection of Component include folders:</h2>
+  C:/Users/Varsha/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.7.1/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>
